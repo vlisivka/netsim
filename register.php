@@ -3,6 +3,9 @@
 require_once 'login.inc.php';
 
 if (isset($_POST['reg_username']) && isset($_POST['reg_password'])) {
+        if($_POST['reg_username']==="" || $_POST['reg_password']==="")
+            exit("Empty username or password");
+            
 	$userq->bindValue(':name', $_POST['reg_username']);
 	$res = $userq->execute();
 

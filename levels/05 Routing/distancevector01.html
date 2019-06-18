@@ -1,0 +1,30 @@
+
+<p>In <strong>dynamic</strong> routing, routers build their routing tables based on the knowledge
+  they have about neighbor's links. Those links now have a <strong>cost</strong>, reflecting a measure of
+  distance/bandwidth/delay between nodes. In <strong>distance vector</strong> algorithms, the router
+    algorithm is basically <em>tell your neighbors when you know about everyone</em>.
+    <!--<li>Link state algorithms: tell everyone what you know about your neighbors</li>-->
+<p> In this level, three routers automatically exchange their distance vector tables and build
+  their routing tables this way. The topleft router is manual and disabled when the simulation starts.
+  Leave it disabled and first observe how routers exchange information and build their tables, and also
+   when they decide to stop.
+
+<p> Next reload (F5) the simulation (to destroy router's tables, not done yet) and activate the manual router.
+  Start by filling its Distance Vector table with its 2 neighbors (Charlie and Router 1), and then you will have
+  to reply to the successive packets sent by others routers by updating your DV table. Building the routing table
+  and sending packets is done automatically when you update the DV table.
+
+<p>Then try to send a ping packet from Charlie to Carol.
+
+<p><it>Tip: to update the DV table, you must add new device entries coming from other routers (adding the link cost
+  to other router costs)
+  or modify the existing entries if their new cost (other cost + link cost) is less than your current cost.
+
+<h3>Level Objectives</h3>
+
+<ul>
+  <li>note on a paper router names, port numbers and link costs</li>
+  <li>reload the level and activate the topleft router</li>
+  <li>update the Distance Vector table of the topleft router when required
+  <li>when done send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong></li>
+</ul>

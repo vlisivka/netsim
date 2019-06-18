@@ -32,15 +32,16 @@ if (LOGGEDIN && !isset($_GET['level'])) {
 	$leveldata = array('id' => -1, 'filename' => 'login/login', 'name' => 'CS4G Netsim');
 }
 
-?><!doctype html> 
-<html lang="en"> 
-<head> 
+?><!doctype html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8" />
 	<title>CS4G Network Simulator</title>
-	
+
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/phaser.min.js"></script>
+	<script src="js/SimpleTableCellEditor.js"></script>
 	<script src="js/ui.js"></script>
 	<script src="js/bindings.js"></script>
 	<script src="js/devicescripts.js"></script>
@@ -75,7 +76,7 @@ if (LOGGEDIN && !isset($_GET['level'])) {
 </div>
 
 <div id="editor" style="display:none;">
-	Sent from: 
+	Sent from:
 	<select id="pktFrom">
 		<option>Alice</option>
 		<option>Bob</option>
@@ -98,11 +99,12 @@ if (LOGGEDIN && !isset($_GET['level'])) {
 </div>
 
 <div id="footer" style="position:absolute;bottom:0.5em;right:0.5em;font-size:0.5em">
-	created by 
+	created by
 	<a href="https://erinn.io/">erinn atwater</a> and
-	<a href="https://cs.uwaterloo.ca/~cbocovic">cecylia bocovich</a> | 
-	device images designed by 
-	<a href="http://www.flaticon.com/authors/madebyoliver">madebyoliver</a> from Flaticon
+	<a href="https://cs.uwaterloo.ca/~cbocovic">cecylia bocovich</a> |
+	device images designed by
+	<a href="http://www.flaticon.com/authors/madebyoliver">madebyoliver</a> and
+	<a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market (connector)</a>  from Flaticon
 </div>
 
 <div id="loading" style="position:absolute;top:0;left:0;right:0;bottom:0;background-color:#DDD;color:#222;text-align:center">

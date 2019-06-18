@@ -34,6 +34,7 @@ function preload() {
 	game.load.image('packet', 'includes/circle.png');
 	game.load.image('server', 'includes/server.png');
 	game.load.image('router', 'includes/router.png');
+	game.load.image('connector', 'includes/connector.png');
 
 	game.load.image('reset', 'includes/ui/reset.png');
 	game.load.image('pause', 'includes/ui/pause.png');
@@ -54,6 +55,7 @@ function create() {
 	grpDevices = game.add.group();
 	grpPackets = game.add.group();
 	grpLaunchers = game.add.group();
+	grpLinks = game.add.group();
 	document.getElementById('pane').style.left = (vpWidth * 0.7) + 'px';
 	document.getElementById('pane').style.width = (vpWidth * 0.3 - 40) + 'px';
 	document.getElementById('pane').style.height = (vpHeight - 40) + 'px';
@@ -83,7 +85,10 @@ function create() {
 		devices[level.devices[i].id].locked = false;
 		devSprite.inputEnabled = true;
 		devSprite.events.onInputDown.add(onDeviceClick, level.devices[i]);
+		if (level.devices[i].hasOwnProperty('type') && (level.devices[i].type == 'DVRouter' || level.devices[i].type == 'ManualDVRouter'))
+			devices[level.devices[i].id].costs = {};
 	}
+
 
 	var graphics = game.add.graphics(0,0);
 	graphics.lineStyle(1, 0, 0);
@@ -95,13 +100,34 @@ function create() {
 		var dst = devices[level.links[i].dst];
 		src.ports[ level.links[i].srcport ] = dst.id;
 		dst.ports[ level.links[i].dstport ] = src.id;
+		if (level.links[i].hasOwnProperty('cost')) {
+			if (src.hasOwnProperty('costs'))
+				src.costs[level.links[i].srcport] = level.links[i].cost;
+			if (dst.hasOwnProperty('costs'))
+				dst.costs[level.links[i].dstport] = level.links[i].cost;
+		}
 		graphics.moveTo(src.sprite.centerX, src.sprite.centerY);
 		graphics.lineTo(dst.sprite.centerX, dst.sprite.centerY);
+		if (level.links[i].hasOwnProperty('isEditable') && level.links[i].isEditable) {
+			var xlink = (src.sprite.centerX + dst.sprite.centerX) / 2;
+			var ylink = (src.sprite.centerY + dst.sprite.centerY) / 2;
+			var linkSprite = grpLinks.create(xlink - 16, ylink - 16, 'connector');
+			linkSprite.inputEnabled = true;
+  		linkSprite.input.useHandCursor = true;
+			linkSprite.events.onInputDown.add(onLinkClick, level.links[i]);
+		}
 	}
 
 	var meshSprite = game.add.sprite(0, 0, graphics.generateTexture());
 	meshSprite.sendToBack();
 	graphics.destroy();
+
+	// Distance vector routers
+  for (var i = 0; i < level.devices.length; i++) {
+	  if (level.devices[i].hasOwnProperty('type') && level.devices[i].type == 'DVRouter') {
+		  deviceScripts.DVRouter.onInit(devices[level.devices[i].id]);
+		}
+	}
 
 	if (!level.hasOwnProperty("triggers")) level.triggers = [];
 
@@ -129,7 +155,10 @@ function initEvents() {
 }
 
 function playPacket() {
-	doPacketAnimation(this.from, getDefaultRecipient(this.from), this.payload);
+	if (this.type == 'packet')
+		doPacketAnimation(this.from, getDefaultRecipient(this.from), this.payload);
+	else if (this.type == 'packetport')
+		doPacketAnimation(this.from, getPortRecipient(this.from, this.port), this.payload);
 }
 
 function getDefaultRecipient(from) {
@@ -200,15 +229,15 @@ function donePacket() {
 
 function satisfiesTrigger(pkt, t) {
 	if (pkt.dst != t.device) return false;
-	
+
 	if (t.type == "packet") {
 		if (!t.hasOwnProperty("payload") && !t.hasOwnProperty("times")) return true;
 		if (!pkt.hasOwnProperty("payload")) return false;
-	
+
 		var layers = t.hasOwnProperty("payload") ? Object.keys(t.payload) : [];
 		for (var i = 0; i < layers.length; i++) {
 			if (!pkt.payload.hasOwnProperty(layers[i])) return false;
-	
+
 			var fields = Object.keys(t.payload[ layers[i] ]);
 			for (var j = 0; j < fields.length; j++) {
 				if (!pkt.payload[ layers[i] ].hasOwnProperty(fields[j])) return false;
@@ -246,4 +275,3 @@ function satisfiesTrigger(pkt, t) {
 		return false;
 	}
 }
-

@@ -42,6 +42,148 @@ function createLaunchers() {
 	grpLaunchers.add( game.add.button(20, 135 + 60 * playerPackets.length, 'add', btnAdd) );
 }
 
+function createRuleEditor(d) {
+	var str = "Destination IP: <select id=\"dstip\">";
+	for (var i = 0; i < level.devices.length; i++) {
+		if (level.devices[i].player) {
+			str += "<option>"+level.devices[i].id+"</option>";
+		}
+	}
+	str += "</select><br>";
+	str += "Port number: <select id=\"portNum\">";
+	for (var i = 0; i < d.ports.length; i++) {
+			str += "<option>"+i.toString()+"</option>";
+	}
+	str += "</select><br>";
+
+	$("#editor").html(str);
+	$('#editor').dialog({
+		title: d.id + ": add routing rule",
+		resizable:false,
+		buttons:[
+			{ text: "Cancel", click:function() { $(this).dialog("close"); }},
+			{ text: "Add" , click:function() { addRule(d); $(this).dialog("close");}}
+		]
+	});
+	$('select').selectmenu();
+	$('#editor').show();
+
+}
+dveditor = null;
+dventries={};
+function addDVEntry(device) {
+	d=$("#dvselect").val();
+	c=$("#dvaddcost").val();
+	w=$("#portselect").val();
+	if (d in dventries) {alert("You may not add an existing device in distance vector table."); return;}
+	if (!c || c=="")  {alert("You should define cost in distance vector table."); return;}
+	if (Number(c) < 0) {alert("You may not use negative cost in distance vector table."); return;}
+	dventries[d] = {'cost': c, 'where': w};
+	$("#dvtable tbody").append("<tr><td class=\"editDevice\">"+d+"</td><td class=\"editCost\">"+c+"</td><td class=\"editWhere\">"+w+"</td></tr>");
+	//dveditor = null;
+	//dveditor = new SimpleTableCellEditor("dvtable");
+	//dveditor.SetEditable('td', { validation : null, formatter : null, keys : {validation: [13],cancellation: [27]}});
+	//dveditor.SetEditableClass('editDevice', { validation : function(e) {return e in devices;},formatter : function(e) {return e;}, keys : {validation: [13]}});
+	//dveditor.SetEditableClass('editCost', { validation : function(e) {return ($.isNumeric(e) && (Number(e) >=0));},formatter : function(e) {return e;}, keys : {validation: [13]}});
+	//dveditor.SetEditableClass('editWhere', { validation : function(e) {return e in device.ports;},formatter : function(e) {return e;}, keys : {validation: [13]}});
+}
+
+function updateDV(d, entries) {
+		var dvkeys = Object.keys(entries);
+		var dvupdated = false;
+		for (var i = 0; i < dvkeys.length; i++) {
+			device = dvkeys[i];
+			if (!(device in d.dv)) { d.dv[device] = {}; dvupdated = true; }
+			if (d.dv[device].cost != entries[device].cost) {
+				d.dv[device].cost = Number(entries[device].cost);
+				dvupdated = true;
+			}
+			if (d.dv[device].where != entries[device].where) {
+				d.dv[device].where = Number(entries[device].where);
+				dvupdated = true;
+		}
+		}
+		dveditor = null;
+		if (dvupdated) {
+			deviceScripts.DVRouter.updateRouting(d);
+			deviceScripts.DVRouter.sendDV(d, false);
+		}
+}
+function editDVCell(evt) {
+	console.log(`Cell edited : ${evt.element.parentElement.cells.item(0)} from ${evt.oldValue} => ${evt.newValue}`);
+	var dv = evt.element.parentElement.cells.item(0).textContent;
+	if (evt.element.cellIndex == 1) {
+		dventries[dv].cost = evt.newValue;
+	} else if (evt.element.cellIndex == 2) {
+		dventries[dv].where = evt.newValue;
+	}
+}
+
+function createDVEditor(d, p, port) {
+	game.paused=true;
+	var pktstr=null;
+	if (p) {
+		pktstr="<h4>Incoming packet</h4>";
+		var other = p.network.srcip;
+		var otherdv = JSON.parse(p.application.payload);
+		pktstr += "Received on portNum "+port.toString()+" ("+other+")<br>";
+		pktstr += "Cost on port "+port.toString()+" is "+d.costs[port].toString();
+		pktstr +=  "<table border=\"1\"><thead><tr><th>Device</th><th>Cost</th></tr></thead><tbody>";
+		for (var i=0; i < otherdv.length; i++) {
+			pktstr+="<tr><td>"+otherdv[i].dstip+"</td><td>"+otherdv[i].cost.toString()+"</td></tr>";
+		}
+		pktstr+="</tbody></table>";
+		pktstr+="<br/><hr/>";
+	}
+
+  var dvstr = "<h4>Distance vector table</h4><table id=\"dvtable\" border=\"1\">";
+	//dvstr+="<caption>Edit entries</caption><thead><tr><th>Device</th><th>Cost</th><th>Where</th></tr></thead><tbody>";
+	dvstr+="<thead><tr><th style=\"width:150px;\">Device</th><th>Cost</th><th>Where</th></tr></thead><tbody>";
+	var dvkeys = Object.keys(d.dv);
+	for (var i = 0; i < dvkeys.length; i++) {
+			dvstr += "<tr><td class=\"editDevice\">"+dvkeys[i]+"</td><td class=\"editCost\">"+d.dv[dvkeys[i]].cost+"</td><td class=\"editWhere\">"+d.dv[dvkeys[i]].where+"</td></tr>";
+	}
+	dvstr = dvstr+"</tbody></table>";
+
+	dventries = Object.assign({}, d.dv);
+	dvselect="<select id=\"dvselect\">";
+	for (var i = 0; i < level.devices.length; i++) {
+		if (!(level.devices[i].id in d.dv)) {
+			dvselect += "<option>"+level.devices[i].id+"</option>";
+		}
+	}
+	dvselect += "</select>";
+	portselect="<select id=\"portselect\">";
+	for (var i = 0; i < d.ports.length; i++) {
+		//portselect += "<option>portNum "+i.toString()+"--"+d.ports[i]+"</option>";
+		portselect += "<option value=\""+i.toString()+"\">portNum "+i.toString()+"</option>";
+	}
+	portselect += "</select>";
+	dvadd = "<fieldset><legend>Add entry</legend> device:"+dvselect + "<br/>cost:<input id=\"dvaddcost\" type=\"number\" min=\"0\"/></br> where: "+portselect+"<br/>";
+	dvadd += "<hr/><button onclick=\"addDVEntry(devices['"+d.id+"']);\" style=\"float: right\">Add</button>";
+	dvadd+= "</fieldset>";
+	var str = dvstr+"<br>"+dvadd;
+	if (pktstr) str = pktstr + str;
+	$("#editor").html(str);
+	dveditor = new SimpleTableCellEditor("dvtable");
+	//dveditor.SetEditableClass('editDevice', { validation : function(e) {return e in devices;},formatter : function(e) {return e;}, keys : {validation: [13]}});
+	dveditor.SetEditableClass('editCost', { validation : function(e) {return ($.isNumeric(e) && (Number(e) >=0));},formatter : function(e) {return Number(e);}, keys : {validation: [13]}});
+	dveditor.SetEditableClass('editWhere', { validation : function(e) {return e in d.ports;},formatter : function(e) {return e;}, keys : {validation: [13]}});
+	$("#dvtable").on("cell:edited", function(event) { editDVCell(event);});
+	$('#editor').dialog({
+		title: d.id + ": Distance vectors",
+		resizable:false,
+		modal: true,
+		scrollable: true,
+		buttons:[
+			{ text: "Cancel", click:function() { game.paused=false; $(this).dialog("close"); }},
+			{ text: "Update" , click:function() { updateDV(d, dventries); game.paused= false; $(this).dialog("close");}}
+		]
+	});
+	//$('select').selectmenu();
+	$('#editor').show();
+}
+
 function createPacketEditor(index, packet) {
 	var str = "Sent from: <select id=\"pktFrom\">";
 	for (var i = 0; i < level.devices.length; i++) {
@@ -117,4 +259,3 @@ function loadPlayerPackets() {
 		console.log("lPP fail: "+txt+", "+err);
 	});
 }
-

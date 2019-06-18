@@ -1,0 +1,21 @@
+
+<p>In previous levels, we saw that computers are usually connected through a series of <strong>routers</strong>.
+When a router receives a <strong>packet</strong>, it looks at the destination in the dstip header of the packet,
+and chooses the route that is closest to the destination computer using a <strong>routing table</strong>. The route
+is given by a <strong>port number</strong> in this table, a router port being connected to a particular <strong>link</strong>
+in the network.
+<p>Pause the simulation and look at each router. You are now able to see and edit their routing tables. These are made of rules (
+  one rule per line in the table), each rule associates a destination address <code>dstip</code> to a router port number <code>portNum</code>.
+   Also use connector icon on links to visualize the port numbers where links are connected on the routers.
+<p>In this level, we just add Charlie's computer and its router <code>Router 4</code> with an almost empty routing table.
+  Try to send a packet from Charlie to Carol and observe the response made by <code>Router 4</code>.
+  In the same way you may try to send a packet from Carol to Charlie.
+
+<p>To pass this level, you have to edit the routing tables to send a ping packet from Charlie's computer to Carol's computer.
+  Remember that ping packets are those with proto header set to ICMP. To edit the routing tables, use the add rule icon near the
+  table header, or use the delete icon near a particular rule to delete that rule. Manually editing the routing tables is known
+  as <strong>Static routing</strong>.
+
+<h3>Level Objectives</h3>
+
+<ul><li>send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong></li></ul>

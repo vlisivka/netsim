@@ -1,0 +1,165 @@
+{
+	devices:[
+		{
+			id:"Charlie",
+			type: "Computer",
+			ports:1,
+			x:0.25,
+			y:0.1,
+			player:true,
+			image:"monitor",
+			script: deviceScripts.ping
+		},
+		{
+			id:"Alice",
+			type:"Computer",
+			ports:1,
+			x:0.75,
+			y:0.1,
+			player:true,
+			image:"imac",
+			script: deviceScripts.ping
+		},
+		{
+			id:"Bob",
+			type:"Computer",
+			ports:1,
+			x:0.25,
+			y:0.75,
+			image:"imac",
+			player:true,
+			script: deviceScripts.ping
+		},
+		{
+			id:"Carol",
+			type:"Computer",
+			ports:1,
+			x:0.75,
+			y:0.75,
+			image:"imac",
+			player:true,
+			script: deviceScripts.ping
+		},
+		{
+			id:"Router 1",
+			type: "DVRouter",
+			ports:4,
+			x:0.65,
+			y:0.3,
+			image:"server",
+			script: deviceScripts.DVRouter,
+			isEditable: true,
+			rules:[
+			]
+		},
+		{
+			id:"Router 2",
+			type:"DVRouter",
+			ports:3,
+			x:0.35,
+			y:0.5,
+			image:"server",
+			script: deviceScripts.DVRouter,
+			isEditable: true,
+			rules:[
+			]
+		},
+		{
+			id:"Router 3",
+			type:"DVRouter",
+			ports:3,
+			x:0.65,
+			y:0.5,
+			image:"server",
+			script: deviceScripts.DVRouter,
+			isEditable: true,
+			rules:[
+			]
+		},
+		{
+			id:"Router 4",
+			type:"ManualDVRouter",
+			active: false,
+			ports:3,
+			x:0.35,
+			y:0.3,
+			image:"router",
+			script: deviceScripts.manualDVRouter,
+			isEditable: true,
+			rules:[
+			],
+			dv: {}
+		}
+	],
+	links:[
+		{
+			isEditable: true,
+			src:"Alice", srcport:0,
+			dst:"Router 1", dstport:0,
+			cost:1
+		},
+		{
+			isEditable: true,
+			src:"Bob", srcport:0,
+			dst:"Router 2", dstport:0,
+			cost:1
+		},
+		{
+			isEditable: true,
+			src:"Carol", srcport:0,
+			dst:"Router 3", dstport:0,
+			cost:1
+		},
+		{
+			isEditable: true,
+			src:"Router 1", srcport:1,
+			dst:"Router 2", dstport:1,
+			cost: 2
+		},
+		{
+			isEditable: true,
+			src:"Router 1", srcport:2,
+			dst:"Router 3", dstport:1,
+			cost: 23
+		},
+		{
+			isEditable: true,
+			src:"Router 2", srcport:2,
+			dst:"Router 3", dstport:2,
+			cost: 3
+		},
+		{
+			isEditable: true,
+			src:"Charlie", srcport:0,
+			dst:"Router 4", dstport:0,
+			cost:1
+		},
+		{
+			isEditable: true,
+			src:"Router 4", srcport:1,
+			dst:"Router 1", dstport:3,
+			cost: 5
+		},
+	],
+	timeline:[
+
+	],
+	triggers:[
+		{
+			type:"packet",
+			device:"Carol",
+			payload:{
+				network:{srcip:"Charlie", dstip:"Carol"},
+				transport:{proto:"ICMP"}
+			}
+		},
+		{
+			type:"packet",
+			device:"Charlie",
+			payload:{
+				network:{srcip:"Carol", dstip:"Charlie"},
+				transport:{proto:"ICMP_REPLY"}
+			}
+		}
+	],
+}

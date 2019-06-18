@@ -22,15 +22,125 @@ var deviceScripts = {
 				sendPacket(device.id, portNum, newpkt);
 				return;
 			}
-
+			var noroute = true;
 			for (var i = 0; i < device.rules.length; i++) {
 				if (device.rules[i].dstip == packet.network.dstip) {
 					sendPacket(device.id, device.rules[i].portNum, newpkt);
+					noroute = false;
 				}
+			}
+			if (noroute) {
+				newpkt.transport={'proto': 'ICMP_NOROUTE'};
+				newpkt.network.srcip = device.id;
+		    newpkt.network.dstip = packet.network.srcip;
+		    sendPacket(device.id, portNum, newpkt);
 			}
 		}
 	},
-
+  DVRouter : {
+		onInit: function(device) {
+			device.dv = {};
+			var neighboors_port = Object.keys(device.ports);
+			for (var i = 0; i < neighboors_port.length; i++) {
+				device.dv[device.ports[neighboors_port[i]]] = {'cost': device.costs[neighboors_port[i]], 'where': neighboors_port[i]};
+			}
+			deviceScripts.DVRouter.updateRouting(device);
+			deviceScripts.DVRouter.sendDV(device, true);
+		},
+		updateRouting: function(device) {
+			var dindex = Object.keys(device.dv);
+			for (var i=0; i < dindex.length; i++) {
+				did = dindex[i];
+				d = devices[did];
+				if (d.hasOwnProperty('type') && (d.type == 'Computer')) {
+					irule = device.rules.findIndex(function(e) {return (e.dstip == did);});
+					if (irule != -1) {
+						device.rules[irule].portNum = device.dv[did].where;
+					} else {
+						device.rules.push({'dstip': did, 'portNum': device.dv[did].where});
+					}
+				}
+			}
+		},
+		sendDV: function(device, oninit) {
+			var payload = [];
+			var dindex = Object.keys(device.dv);
+			for (var i=0; i < dindex.length; i++) {
+				did = dindex[i];
+				payload.push({'dstip': did, 'cost': device.dv[did].cost});
+				}
+			var neighboors_port = Object.keys(device.ports);
+			for (var i = 0; i < neighboors_port.length; i++) {
+				var destid = device.ports[neighboors_port[i]];
+				var d = devices[destid];
+				if (d.hasOwnProperty('type') && ((d.type == 'DVRouter') || (d.type == 'ManualDVRouter'))) {
+					var pkt = {};
+					pkt.network = {};
+					pkt.network.srcip = device.id;
+					pkt.network.dstip = destid;
+					pkt.application = {};
+					pkt.application.type = "DV";
+					pkt.application.payload = JSON.stringify(payload);
+					if (oninit) {
+						if (!level.hasOwnProperty('timeline')) level.timeline = [];
+						level.timeline.push({'type': 'packetport', 'at':500, 'from': device.id, 'port': neighboors_port[i],'payload': pkt})
+					}
+					else
+						sendPacket(device.id, neighboors_port[i], pkt);
+				}
+			}
+		},
+		onPacketReceived: function(device, packet, portNum) {
+			if (packet.hasOwnProperty('application') && packet.application.hasOwnProperty('type') && (packet.application.type == 'DV')) {
+				if (packet.network.dstip != device.id) {
+					alert('Ouch! received a Distance vector packet for someone else. Discarding packet');
+					return;
+				}
+				var dvupdated = false;
+				var from = packet.network.srcip;
+				var fromcost = device.costs[portNum];
+				var otherdv = JSON.parse(packet.application.payload);
+				for (var i=0; i<otherdv.length; i++) {
+					try {
+						var otherdstip = otherdv[i].dstip;
+						if (otherdstip == device.id) continue;
+						var othercost = otherdv[i].cost;
+						if (!device.dv.hasOwnProperty(otherdstip)) {
+							dvupdated = true;
+							device.dv[otherdstip] = {'cost': fromcost + othercost, 'where': portNum};
+						} else {
+							if ((fromcost + othercost) < device.dv[otherdstip].cost) {
+								dvupdated=true;
+								device.dv[otherdstip].cost = fromcost + othercost;
+								device.dv[otherdstip].where = portNum;
+								}
+							}
+						} catch (a) {
+					alert('Malformed Distance vector packet');
+					return;
+					}
+				}
+				if (dvupdated) {
+				  deviceScripts.DVRouter.updateRouting(device);
+				  deviceScripts.DVRouter.sendDV(device, false);
+				}
+				return;
+			}
+			deviceScripts.manualRouter.onPacketReceived(device, packet, portNum);
+		}
+	},
+	manualDVRouter: {
+		onPacketReceived: function (device, packet, portNum) {
+			if (device.active) {
+				if ((!packet) || (packet.hasOwnProperty('application') && packet.application.hasOwnProperty('type') && (packet.application.type == 'DV'))) {
+					//alert(device.id + ' receives a packet.');
+					createDVEditor(device, packet, portNum);
+					return;
+				}
+				deviceScripts.manualRouter.onPacketReceived(device, packet, portNum);
+			}
+		}
+	},
 	hub: {
 		onPacketReceived: function (device, packet) {
 			//.
@@ -61,7 +171,7 @@ var deviceScripts = {
                                     dstip: packet.network.srcip
                                 },
                                 transport: {
-                                    proto: packet.transport.proto
+                                    proto: 'ICMP_REPLY'
                                 }
                             };
                             sendPacket(device.id, 0, new_packet);
@@ -197,7 +307,7 @@ var deviceScripts = {
                     if(packet.hasOwnProperty("application") && packet["application"].hasOwnProperty("type")){
                     var type = packet.application.type;
                     switch(type) {
-                        case "keyrequest": 
+                        case "keyrequest":
                             var new_packet = {
                                 network: {
                                     srcip: packet.network.dstip,
@@ -250,7 +360,7 @@ var deviceScripts = {
             }
         }
     }
-    
+
 }
 
 function copyPacket (packet) {

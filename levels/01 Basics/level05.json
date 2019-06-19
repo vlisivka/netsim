@@ -70,10 +70,10 @@
 			device:"Alice",
 			payload:{
 				network:{srcip:"Google", dstip:"Alice"},
-				transport:{proto:"ICMP"}
+				transport:{proto:"ICMP_REPLY"}
 			}
             }
-	    
+
         ],
 	nextLevel:6
 }

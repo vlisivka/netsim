@@ -155,7 +155,7 @@ function initEvents() {
 }
 
 function playPacket() {
-	if (this.type == 'packet')
+	if ((!this.hasOwnProperty('type')) || (this.type == 'packet')) 
 		doPacketAnimation(this.from, getDefaultRecipient(this.from), this.payload);
 	else if (this.type == 'packetport')
 		doPacketAnimation(this.from, getPortRecipient(this.from, this.port), this.payload);

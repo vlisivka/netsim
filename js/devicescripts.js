@@ -171,7 +171,7 @@ var deviceScripts = {
                                     dstip: packet.network.srcip
                                 },
                                 transport: {
-                                    proto: 'ICMP_REPLY'
+                                    proto: proto == "icmp" ? 'ICMP_REPLY' : proto
                                 }
                             };
                             sendPacket(device.id, 0, new_packet);
@@ -186,9 +186,13 @@ var deviceScripts = {
 
 			if (packet.network.dstip == device.id) {
 				// TODO: use something other than proto for NAT table
-				if (device.rules.hasOwnProperty( packet.transport.proto )) {
-					newpkt.network.dstip = device.rules[packet.transport.proto].dstip;
-					sendPacket(device.id, device.rules[packet.transport.proto].portNum, newpkt);
+				var p = packet.transport.proto;
+				if (packet.transport.proto == 'ICMP_REPLY') {
+					p = 'ICMP';
+				}
+				if (device.rules.hasOwnProperty( p )) {
+					newpkt.network.dstip = device.rules[p].dstip;
+					sendPacket(device.id, device.rules[p].portNum, newpkt);
 				}
 			} else {
 				if (packet.hasOwnProperty("transport") && packet.transport.hasOwnProperty("proto")) {

@@ -3,7 +3,7 @@
   "features": {
   },
   "postCreateCommand": 
-    "sudo rm -rf /var/www/html && sudo ln -s /workspaces/netsim/ /var/www/html && sudo mkdir /var/www-data && sudo chown www-data:www-data /var/www-data",
+    "sudo rm -rf /var/www/html && sudo ln -s /workspaces/netsim/ /var/www/html && sudo mkdir /var/www-data && sudo chown www-data:www-data /var/www-data && sudo /workspaces/netsim/createDB.bash",
   "postAttachCommand": {
     "server": "sudo apache2ctl start"
   },

@@ -1,7 +1,7 @@
 #!/bin/bash
 sqlite3 /var/www-data/netsim.sqlite3 <<'END_SQL'
 CREATE TABLE user (id integer PRIMARY KEY,name text,password text);
-INSERT INTO user (name, password) VALUES ('erinn','$2y$10$n5ajLY.kMZVjLCNsUuPXFO70VUYLoolpQRGl3RCXOBVIaY4/peWXS');
+INSERT INTO user (name, password) VALUES ('netsim','$2y$10$P1HF8dAfF55rzE93LAunaOnMoePALZxUnbJSl0MSxajAdbyB6SbqG');
 CREATE TABLE category (id integer PRIMARY KEY,name text,orderby integer);
 INSERT INTO category (name, orderby) VALUES('Basics', 1),('Spoofs', 2),('Denial of Service', 3),('Attacks', 4);
 CREATE TABLE level (id integer PRIMARY KEY,category_id integer,name text,orderby integer,filename text);

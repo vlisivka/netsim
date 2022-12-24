@@ -1,17 +1,27 @@
 {
+  "name": "NetSim",
   "image": "mcr.microsoft.com/devcontainers/php",
-  "features": {
-  },
-  "postCreateCommand": 
-    "sudo rm -rf /var/www/html && sudo ln -s /workspaces/netsim/ /var/www/html && sudo mkdir /var/www-data && sudo chown www-data:www-data /var/www-data && sudo apt update && sudo apt install sqlite3 && sudo bash /workspaces/netsim/createDB.bash; echo 'app running on http://localhost:8080'",
-  "postAttachCommand": {
-    "server": "sudo apache2ctl start"
-  },
+  "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
       "label": "NetSim",
+      "protocol": "http",
       "onAutoForward": "openBrowser"
     }
+  },
+  "features": {
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
+  },
+  "postCreateCommand": {
+    "docRoot": "sudo rm -rf /var/www/html && sudo ln -s /workspaces/netsim/ /var/www/html",
+    "dbRoot": "sudo mkdir /var/www-data && sudo chown www-data:www-data /var/www-data && sudo bash /workspaces/netsim/createDB.bash",
+    "removePort": "sudo sed -i '/^Listen 80$/d' /etc/apache2/ports.conf",
+    "changePort": "sudo sed -i 's/^<VirtualHost *:80>$/<VirtualHost *:8080>/' /etc/apache2/sites-available/000-default.conf",
+    "addName": "sudo sed -i '/^#ServerRoot/a ServerName netsim' /etc/apache2/apache2.conf"
+  },
+  "postAttachCommand": {
+    "server": "sudo apache2ctl start",
+    "prompt": "echo 'Running on http://localhost:8080'"
   },
   "customizations": {
     "codespaces": {

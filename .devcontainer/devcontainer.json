@@ -14,7 +14,7 @@
   },
   "postCreateCommand": {
     "docRoot": "sudo rm -rf /var/www/html && sudo ln -s /workspaces/netsim/ /var/www/html",
-    "dbRoot": "sudo mkdir /var/www-data && sudo chown www-data:www-data /var/www-data && sudo bash /workspaces/netsim/createDB.bash",
+    "dbRoot": "sudo bash /workspaces/netsim/createDB.bash",
     "removePort": "sudo sed -i '/^Listen 80$/d' /etc/apache2/ports.conf",
     "changePort": "sudo sed -i 's/^<VirtualHost *:80>$/<VirtualHost *:8080>/' /etc/apache2/sites-available/000-default.conf",
     "addName": "sudo sed -i '/^#ServerRoot/a ServerName netsim' /etc/apache2/apache2.conf"

@@ -2,5 +2,6 @@ runtime: php
 env: flex
 
 runtime_config:
-  document_root: netsim-master
+  runtime_version: "8.4"
+  document_root: .
 

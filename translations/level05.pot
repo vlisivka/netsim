@@ -39,5 +39,5 @@ msgid "Level Objectives"
 msgstr ""
 
 #: levels/01+Basics/level05.html%2Bp.p.p.ul.li:14-5
-msgid "send a ping from Alice to Google"
+msgid "send a ping from Alice to Wikipedia"
 msgstr ""

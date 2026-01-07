@@ -19,7 +19,7 @@
 				{dstip:"Toronto", portNum:1},
 				{dstip:"New York", portNum:1},
 				{dstip:"Mountain View", portNum:1},
-                                {dstip:"Google", portNum:1}
+                                {dstip:"Wikipedia", portNum:1}
 			],
 			secret: true
 		},
@@ -35,7 +35,7 @@
 				{dstip:"Waterloo", portNum:0},
 				{dstip:"New York", portNum:1},
 				{dstip:"Mountain View", portNum:1},
-                                {dstip:"Google", portNum:1}
+                                {dstip:"Wikipedia", portNum:1}
 			],
 			secret: true
 		},
@@ -51,7 +51,7 @@
 				{dstip:"Toronto", portNum:0},
 				{dstip:"Waterloo", portNum:0},
 				{dstip:"Mountain View", portNum:1},
-                                {dstip:"Google", portNum:1}
+                                {dstip:"Wikipedia", portNum:1}
 			],
 			secret: true
 		},
@@ -67,12 +67,12 @@
 				{dstip:"Waterloo", portNum:0},
 				{dstip:"Toronto", portNum:0},
 				{dstip:"New York", portNum:0},
-                                {dstip:"Google", portNum:1}
+                                {dstip:"Wikipedia", portNum:1}
 			],
 			secret: true
 		},
 		{
-			id:"Google",
+			id:"Wikipedia",
                         image: "server",
 			ports:1,
 			x:0.85,
@@ -99,7 +99,7 @@
 		},
 		{
 			src:"Mountain View", srcport:1,
-			dst:"Google", dstport:0
+			dst:"Wikipedia", dstport:0
 		}
 	],
 	timeline:[
@@ -108,7 +108,7 @@
 			at:1000,
 			from:"Alice",
 			payload:{
-				network:{srcip:"Alice",dstip:"Google"},
+				network:{srcip:"Alice",dstip:"Wikipedia"},
 				transport:{proto:"ICMP", ttl:256}
 			}
 		},
@@ -117,7 +117,7 @@
 			at:2000,
 			from:"Alice",
 			payload:{
-				network:{srcip:"Alice",dstip:"Google"},
+				network:{srcip:"Alice",dstip:"Wikipedia"},
 				transport:{proto:"ICMP", ttl:256}
 			}
 		}

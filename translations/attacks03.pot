@@ -45,5 +45,5 @@ msgstr ""
 #: levels/04+Attacks/attacks03.html%2Bp.p.p.ul.li:16-2
 msgid ""
 "Send a ping to <strong>each</strong> of the four routers between Alice and "
-"Google"
+"Wikipedia"
 msgstr ""

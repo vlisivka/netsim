@@ -22,7 +22,7 @@ msgstr ""
 
 #: levels/03+DoS/dos03.html%2Bp.p:5-1
 msgid ""
-"In this level, Google has received an <strong>upgrade</strong>: it can no "
+"In this level, Wikipedia has received an <strong>upgrade</strong>: it can no "
 "longer be DoS'd from a single computer. Multiple computers will be required "
 "to coordinate with each other in order to send enough traffic."
 msgstr ""
@@ -37,7 +37,7 @@ msgstr ""
 #: levels/03+DoS/dos03.html%2Bp.p.p.p:11-1
 msgid ""
 "Experiment with sending broadcast pings by sending a message with the dstip "
-"set to \"Broadcast\". See if you can overwhelm Google by combining this with "
+"set to \"Broadcast\". See if you can overwhelm Wikipedia by combining this with "
 "what you learned about spoofing packet source addresses."
 msgstr ""
 
@@ -50,11 +50,11 @@ msgid "Send a ping to the IP <strong>Broadcast</strong>"
 msgstr ""
 
 #: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:18-2
-msgid "Can you get Barbara to send a packet to Google?"
+msgid "Can you get Barbara to send a packet to Wikipedia?"
 msgstr ""
 
 #: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:19-2
-msgid "Overwhelm Google with traffic"
+msgid "Overwhelm Wikipedia with traffic"
 msgstr ""
 
 #: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:20-2

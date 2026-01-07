@@ -17,9 +17,9 @@ msgid ""
 "A server or computer can protect itself by blocking malicious computers "
 "using a <strong>firewall</strong>. A <strong>firewall</strong> keeps a list "
 "of \"bad\" source addresses and drops all packets that come from an address "
-"on the list. In this example, Google has learned from the previous attack "
+"on the list. In this example, Wikipedia has learned from the previous attack "
 "that Alice is a malicious user and has set up a firewall to block her. "
-"Observe how the packets from Alice's computer to Google are dropped."
+"Observe how the packets from Alice's computer to Wikipedia are dropped."
 msgstr ""
 
 #: levels/03+DoS/dos02.html%2Bp.p:7-1
@@ -31,7 +31,7 @@ msgstr ""
 
 #: levels/03+DoS/dos02.html%2Bp.p.p:10-1
 msgid ""
-"To pass this level, launch a <strong>DDoS</strong> attack against Google "
+"To pass this level, launch a <strong>DDoS</strong> attack against Wikipedia "
 "from Alice's additional machines."
 msgstr ""
 
@@ -40,5 +40,5 @@ msgid "Level Objectives"
 msgstr ""
 
 #: levels/03+DoS/dos02.html%2Bp.p.p.ul.li:14-5
-msgid "send Google more packets than it can handle"
+msgid "send Wikipedia more packets than it can handle"
 msgstr ""

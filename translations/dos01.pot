@@ -1,0 +1,45 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/03+DoS/dos01.html%2Bp:2-1
+msgid ""
+"A <strong>Denial of Service (DoS)</strong> attack overwhelms a computer or "
+"server by flooding it with <strong>packets</strong>. The purpose of "
+"<strong>DoS</strong> attacks are to make a system (such as Google) "
+"unavailable for others to use. This often distracts the administrators of "
+"the system and allows an attacker to exploit it in different ways and remain "
+"unnoticed."
+msgstr ""
+
+#: levels/03+DoS/dos01.html%2Bp.p:7-1
+msgid ""
+"In this level, you will execute a <strong>DoS</strong> attack against "
+"Google. To pass the level, you must overwhelm the server by sending it many "
+"packets. Experiment with the amount of packets to see how many the website "
+"can handle."
+msgstr ""
+
+#: levels/03+DoS/dos01.html%2Bp.p.p:10-1
+msgid ""
+"<strong>Hint:</strong> remember that you can easily send duplicate packets "
+"using the \"Repeat\" feature of the Editor"
+msgstr ""
+
+#: levels/03+DoS/dos01.html%2Bp.p.p.h3:11-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/03+DoS/dos01.html%2Bp.p.p.ul.li:13-5
+msgid "send Google more packets than it can handle"
+msgstr ""

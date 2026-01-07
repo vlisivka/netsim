@@ -1,0 +1,46 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/02+Spoofs/spoofs01.html%2Bp:2-1
+msgid ""
+"The srcip and dstip headers can be easily changed to specify different "
+"source and destination addresses. In the previous levels, we saw that "
+"changing the destination address changed the direction in which the packet "
+"was sent. Note, however, that we did not need to specify a source address. "
+"In fact, routers do not take into account where a packet is coming from, "
+"only where it is going. One security flaw of the Internet is that we can "
+"easily make a packet <strong>look</strong> like it is coming from one "
+"address when it is really coming from another. This is called "
+"<strong>spoofing</strong>."
+msgstr ""
+
+#: levels/02+Spoofs/spoofs01.html%2Bp.p:9-1
+msgid ""
+"To pass this level, send a packet from Alice's computer to Bob's computer "
+"that looks like it is coming from Carol."
+msgstr ""
+
+#: levels/02+Spoofs/spoofs01.html%2Bp.p.p:11-1
+msgid ""
+"Notice that we can trick Bob into thinking Carol is talking to him, even "
+"though we're not allowed to send packets from Carol!"
+msgstr ""
+
+#: levels/02+Spoofs/spoofs01.html%2Bp.p.p.h3:13-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/02+Spoofs/spoofs01.html%2Bp.p.p.ul.li:15-5
+msgid "make Bob think he received a packet from Carol"
+msgstr ""

@@ -1,0 +1,44 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/03+DoS/dos02.html%2Bp:2-1
+msgid ""
+"A server or computer can protect itself by blocking malicious computers "
+"using a <strong>firewall</strong>. A <strong>firewall</strong> keeps a list "
+"of \"bad\" source addresses and drops all packets that come from an address "
+"on the list. In this example, Google has learned from the previous attack "
+"that Alice is a malicious user and has set up a firewall to block her. "
+"Observe how the packets from Alice's computer to Google are dropped."
+msgstr ""
+
+#: levels/03+DoS/dos02.html%2Bp.p:7-1
+msgid ""
+"One way for an adversary to bypass a <strong>firewall</strong> is to launch "
+"a <strong>Distributed Denial of Service (DDos)</strong> attack. To do this, "
+"the adversary sends packets from multiple machines under her control."
+msgstr ""
+
+#: levels/03+DoS/dos02.html%2Bp.p.p:10-1
+msgid ""
+"To pass this level, launch a <strong>DDoS</strong> attack against Google "
+"from Alice's additional machines."
+msgstr ""
+
+#: levels/03+DoS/dos02.html%2Bp.p.p.h3:12-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/03+DoS/dos02.html%2Bp.p.p.ul.li:14-5
+msgid "send Google more packets than it can handle"
+msgstr ""

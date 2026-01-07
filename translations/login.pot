@@ -1,0 +1,46 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/login/login.html%2Bp:2-1
+msgid ""
+"Netsim is a simulator game intended to teach you the basics of how computer "
+"networks function, with an emphasis on security. You will learn how to "
+"perform attacks that real hackers use, and see how they work in our "
+"simulator!"
+msgstr ""
+
+#: levels/login/login.html%2Bp:4-1
+msgid ""
+"Netsim is completely free to play. To get started, log in below or register "
+"a new account."
+msgstr ""
+
+#: levels/login/login.html%2Bdiv.div.p:11-3
+msgid "<?=$login_error?>"
+msgstr ""
+
+#: levels/login/login.html%2Bform.input[value]:22-2
+msgid "Log in"
+msgstr ""
+
+#: levels/login/login.html%2Bp:28-1
+msgid ""
+"Netsim was created by <a href=\"https://erinn.io/\">Erinn Atwater</a> and <a "
+"href=\"https://cs.uwaterloo.ca/~cbocovic\">Cecylia Bocovich</a>. Some device "
+"images were designed by <a href="
+"\"http://www.flaticon.com/authors/madebyoliver\">madebyoliver</a> from "
+"Flaticon. View Netsim's source code on <a href="
+"\"https://github.com/errorinn/netsim\">Github</a>, or tip the creator on <a "
+"href=\"https://www.patreon.com/errorinn\">Patreon</a>."
+msgstr ""

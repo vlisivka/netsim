@@ -1,0 +1,44 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/01+Basics/level04.html%2Bp:2-1
+msgid ""
+"Computers are usually not connected directly, but are accessible through a "
+"series of <strong>routers</strong>. A router operates much like a postal "
+"office. When it receives a <strong>packet</strong>, it looks at the "
+"destination and determines which route to send it on. They usually choose "
+"the route that is closest to the destination computer. They keep track of "
+"all their routes in a <strong>routing table</strong>."
+msgstr ""
+
+#: levels/01+Basics/level04.html%2Bp.p:7-1
+msgid ""
+"Pause the simulation and look at one of the packets. It contains only the "
+"srcip and dstip headers we saw in the earlier levels. There is no extra "
+"information to tell the routers how to send the packet. Instead, this "
+"information is stored in the router's routing table."
+msgstr ""
+
+#: levels/01+Basics/level04.html%2Bp.p.p:11-1
+msgid ""
+"To pass this level, send a packet from Bob's computer to Carol's computer."
+msgstr ""
+
+#: levels/01+Basics/level04.html%2Bp.p.p.h3:13-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/01+Basics/level04.html%2Bp.p.p.ul.li:15-5
+msgid "send a packet from <strong>Bob</strong> to <strong>Carol</strong>"
+msgstr ""

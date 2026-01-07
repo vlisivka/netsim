@@ -1,0 +1,68 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/01+Basics/level02.html%2Bp:2-1
+msgid ""
+"In this level, you will learn how to create <strong>packets</strong> and "
+"send them from one computer to another."
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p:4-1
+msgid ""
+"Pause the simulation and click on the <strong>packet</strong> that is sent "
+"from Bob's <strong>computer</strong> to Alice's <strong>computer</strong>. "
+"The information about a packet is contained in its packet <strong>headers</"
+"strong>. This is a simple packet that only lists information in the "
+"<strong>network layer</strong>. Note the two pieces of information contained "
+"in this header: <strong>srcip</strong> (the source of the packet) and "
+"<strong>dstip</strong> (the destination of the packet)."
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.h3:10-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p:12-1
+msgid ""
+"To pass this level, you will need to send a packet from Alice to Bob. To do "
+"this:"
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:15-2
+msgid "Click the + button and add a new packet"
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:16-2
+msgid ""
+"We need to send this packet <strong>from</strong> Alice, so make sure she is "
+"selected in the From: dropdown menu."
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:17-2
+msgid ""
+"You need to set the <strong>srcip</strong> and <strong>dstip</strong> "
+"headers in the network layer.<br> <em>hint: restart and pause the simulator "
+"to click on packets to see what the srcip and dstip header values are set "
+"to.</em>"
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:19-2
+msgid "Save your new packet by pressing <strong>Add</strong> button"
+msgstr ""
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:20-2
+msgid ""
+"Restart the simulation and click the send arrow beside the newly added "
+"packet to see it in action!"
+msgstr ""

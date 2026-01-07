@@ -1,0 +1,45 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/01+Basics/level03.html%2Bp:2-1
+msgid ""
+"So far we have seen very basic packets. These packets have shown only the "
+"source (who sent the packet) and the destination (who received the packet). "
+"In this level, we will see a more complex packet that will give the "
+"recipient information about how to respond."
+msgstr ""
+
+#: levels/01+Basics/level03.html%2Bp.p:6-1
+msgid ""
+"Pause the simulation to view the packet sent from Alice's computer to "
+"Google. There is a new header under the <strong>transport layer</strong>. "
+"The header, <strong>proto</strong> defines the <strong>protocol</strong> "
+"that will be run on this layer. The protocol listed is <strong>ICMP</"
+"strong>, which is used to <strong>ping</strong> computers. When a computer "
+"receives a packet with an ICMP echo request (ping) they respond by sending "
+"back a packet with an ICMP echo (pong). Resume the simulation and notice the "
+"response packet sent from Google to Alice's computer."
+msgstr ""
+
+#: levels/01+Basics/level03.html%2Bp.p.h3:13-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/01+Basics/level03.html%2Bp.p.ul.li:16-5
+msgid ""
+"To complete this level, you must send 4 more ICMP echo requests from Alice "
+"to Google. Proceed as before, by clicking the + to add new packets. Remember "
+"to fill in the new <strong>transport layer</strong> header proto header "
+"field."
+msgstr ""

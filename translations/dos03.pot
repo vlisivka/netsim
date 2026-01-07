@@ -1,0 +1,64 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/03+DoS/dos03.html%2Bp:2-1
+msgid ""
+"The router in this level responds to a special type of ping, called a "
+"\"Broadcast ping\". When a router receives a packet that is addressed to the "
+"broadcast address, it replicates it and sends it to <em>all</em> the "
+"machines on the network."
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p:5-1
+msgid ""
+"In this level, Google has received an <strong>upgrade</strong>: it can no "
+"longer be DoS'd from a single computer. Multiple computers will be required "
+"to coordinate with each other in order to send enough traffic."
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p:8-1
+msgid ""
+"However, you only have control of a single computer! You will have to "
+"implement a <strong>smurf attack</strong>. In a smurf attack, you leverage "
+"other devices to send traffic <em>for you</em>."
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p:11-1
+msgid ""
+"Experiment with sending broadcast pings by sending a message with the dstip "
+"set to \"Broadcast\". See if you can overwhelm Google by combining this with "
+"what you learned about spoofing packet source addresses."
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.h3:14-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:17-2
+msgid "Send a ping to the IP <strong>Broadcast</strong>"
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:18-2
+msgid "Can you get Barbara to send a packet to Google?"
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:19-2
+msgid "Overwhelm Google with traffic"
+msgstr ""
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:20-2
+msgid ""
+"Try to do this with only one packet in the Editor! (you may use the "
+"\"repeat\" feature)"
+msgstr ""

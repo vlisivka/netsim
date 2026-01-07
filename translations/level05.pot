@@ -1,0 +1,43 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/01+Basics/level05.html%2Bp:2-1
+msgid ""
+"Often, your personal computer is connected to the Internet through a "
+"<strong>modem</strong>. This <strong>modem</strong> takes the outgoing "
+"packets from all the machines connected to it and set the source address to "
+"a single value (such as \"Home\"). Incoming packets are then mapped back to "
+"the original machines. Pause the simulation and look at the packet "
+"information before and after it passes through the <strong>modem</strong>."
+msgstr ""
+
+#: levels/01+Basics/level05.html%2Bp.p:8-1
+msgid ""
+"To pass this level, send a <strong>ping</strong> request from Alice's "
+"computer to Google."
+msgstr ""
+
+#: levels/01+Basics/level05.html%2Bp.p.p:10-1
+msgid ""
+"<strong>Remember:</strong> ping packets have a transport layer header called "
+"<span class=\"ul\">proto</span> with the value <span class=\"ul\">ICMP</span>"
+msgstr ""
+
+#: levels/01+Basics/level05.html%2Bp.p.p.h3:12-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/01+Basics/level05.html%2Bp.p.p.ul.li:14-5
+msgid "send a ping from Alice to Google"
+msgstr ""

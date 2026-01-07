@@ -1,0 +1,60 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/05+Routing/static01.html%2Bp:2-1
+msgid ""
+"In previous levels, we saw that computers are usually connected through a "
+"series of <strong>routers</strong>. When a router receives a <strong>packet</"
+"strong>, it looks at the destination in the dstip header of the packet, and "
+"chooses the route that is closest to the destination computer using a "
+"<strong>routing table</strong>. The route is given by a <strong>port number</"
+"strong> in this table, a router port being connected to a particular "
+"<strong>link</strong> in the network."
+msgstr ""
+
+#: levels/05+Routing/static01.html%2Bp.p:8-1
+msgid ""
+"Pause the simulation and look at each router. You are now able to see and "
+"edit their routing tables. These are made of rules (one rule per line in the "
+"table), each rule associates a destination address <code>dstip</code> to a "
+"router port number <code>portNum</code>. Also use connector icon on links to "
+"visualize the port numbers where links are connected on the routers."
+msgstr ""
+
+#: levels/05+Routing/static01.html%2Bp.p.p:12-1
+msgid ""
+"In this level, we just add Charlie's computer and its router <code>Router 4</"
+"code> with an almost empty routing table. Try to send a packet from Charlie "
+"to Carol and observe the response made by <code>Router 4</code>. In the same "
+"way you may try to send a packet from Carol to Charlie."
+msgstr ""
+
+#: levels/05+Routing/static01.html%2Bp.p.p.p:16-1
+msgid ""
+"To pass this level, you have to edit the routing tables to send a ping "
+"packet from Charlie's computer to Carol's computer. Remember that ping "
+"packets are those with proto header set to ICMP. To edit the routing tables, "
+"use the add rule icon near the table header, or use the delete icon near a "
+"particular rule to delete that rule. Manually editing the routing tables is "
+"known as <strong>Static routing</strong>."
+msgstr ""
+
+#: levels/05+Routing/static01.html%2Bp.p.p.p.h3:21-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/05+Routing/static01.html%2Bp.p.p.p.ul.li:23-5
+msgid ""
+"send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong>"
+msgstr ""

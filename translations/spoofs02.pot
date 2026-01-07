@@ -1,0 +1,44 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/02+Spoofs/spoofs02.html%2Bp:2-1
+msgid ""
+"This level contains several devices connected to a <strong>switch</strong>. "
+"A <strong>switch</strong> is similar to a router, but it starts out with an "
+"empty <strong>routing table</strong>. Over time, it learns where to send "
+"packets that belong to a specific destination. Observe how the "
+"<strong>switch</strong> learns where devices are connected over time."
+msgstr ""
+
+#: levels/02+Spoofs/spoofs02.html%2Bp.p:7-1
+msgid ""
+"Your goal is to \"steal\" a packet intended to be sent to Charlie. To do "
+"this, take advantage of the switch's learning process to direct packets with "
+"a dstip of Charlie to Alice's computer."
+msgstr ""
+
+#: levels/02+Spoofs/spoofs02.html%2Bp.p.p:11-1
+msgid ""
+"<strong>Hint:</strong> This level will require careful timing! Make sure you "
+"launch your packet at the correct time in the simulation. Use the restart "
+"button to experiment with different timings."
+msgstr ""
+
+#: levels/02+Spoofs/spoofs02.html%2Bp.p.p.h3:13-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/02+Spoofs/spoofs02.html%2Bp.p.p.ul.li:15-5
+msgid "use Alice to steal a packet sent from Google to Charlie"
+msgstr ""

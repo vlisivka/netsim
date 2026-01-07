@@ -1,0 +1,49 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/04+Attacks/attacks03.html%2Bp:2-1
+msgid ""
+"In this level, the routers use the <strong>time to live (TTL)</strong> "
+"field. The TTL field is designed to keep packets from getting trapped in "
+"infinite loops: each router decreases the TTL value by one, and if it ever "
+"reaches zero, it stops forwarding the packet and returns an error message "
+"instead."
+msgstr ""
+
+#: levels/04+Attacks/attacks03.html%2Bp.p:7-1
+msgid ""
+"We have hidden the IP addresses of the routers in this level. Your job is to "
+"figure out who they are!"
+msgstr ""
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p:9-1
+msgid ""
+"<strong>Fun fact:</strong> This trick is called \"tracerouting\", and you "
+"can do it for real to see the routers between you and anyone else. Ask a TA "
+"to show you how!"
+msgstr ""
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.h3:12-1
+msgid "Level Objectives"
+msgstr ""
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.ul.li:15-2
+msgid "Figure out how to use TTLs to figure out the IP addresses of routers"
+msgstr ""
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.ul.li:16-2
+msgid ""
+"Send a ping to <strong>each</strong> of the four routers between Alice and "
+"Google"
+msgstr ""

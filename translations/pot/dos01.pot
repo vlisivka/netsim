@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,9 @@ msgstr ""
 #: levels/03+DoS/dos01.html%2Bp.p:7-1
 msgid ""
 "In this level, you will execute a <strong>DoS</strong> attack against "
-"Wikipedia. To pass the level, you must overwhelm the server by sending it many "
-"packets. Experiment with the amount of packets to see how many the website "
-"can handle."
+"Wikipedia. To pass the level, you must overwhelm the server by sending it "
+"many packets. Experiment with the amount of packets to see how many the "
+"website can handle."
 msgstr ""
 
 #: levels/03+DoS/dos01.html%2Bp.p.p:10-1
@@ -40,6 +40,6 @@ msgstr ""
 msgid "Level Objectives"
 msgstr ""
 
-#: levels/03+DoS/dos01.html%2Bp.p.p.ul.li:13-5
+#: levels/03+DoS/dos01.html%2Bp.p.p.ul.li:14-2
 msgid "send Wikipedia more packets than it can handle"
 msgstr ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,21 +20,33 @@ msgid ""
 "simulator!"
 msgstr ""
 
-#: levels/login/login.html%2Bp:4-1
+#: levels/login/login.html%2Bp:5-1
 msgid ""
 "Netsim is completely free to play. To get started, log in below or register "
 "a new account."
 msgstr ""
 
-#: levels/login/login.html%2Bdiv.div.p:11-3
+#: levels/login/login.html%2Bdiv.div.p:12-3
 msgid "<?=$login_error?>"
 msgstr ""
 
-#: levels/login/login.html%2Bform.input[value]:22-2
+#: levels/login/login.html%2Bform.p.label:20-5
+msgid "Username:"
+msgstr ""
+
+#: levels/login/login.html%2Bform.p.label:24-10
+msgid "Password:"
+msgstr ""
+
+#: levels/login/login.html%2Bform.p:24-41
 msgid "Log in"
 msgstr ""
 
-#: levels/login/login.html%2Bp:28-1
+#: levels/login/login.html%2Bform.p:30-2
+msgid "Register"
+msgstr ""
+
+#: levels/login/login.html%2Bp:35-1
 msgid ""
 "Netsim was created by <a href=\"https://erinn.io/\">Erinn Atwater</a> and <a "
 "href=\"https://cs.uwaterloo.ca/~cbocovic\">Cecylia Bocovich</a>. Some device "

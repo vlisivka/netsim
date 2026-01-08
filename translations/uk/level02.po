@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: netsim 0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: 2026-01-07 14:35+0300\n"
+"Last-Translator: Volodymyr M. Lisivka <vlisivkaLgmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/01+Basics/level02.html%2Bp:2-1
+msgid ""
+"In this level, you will learn how to create <strong>packets</strong> and "
+"send them from one computer to another."
+msgstr ""
+"На цьому рівні ви навчитесь створювати <strong>пакети</strong> (packets) і надсилати "
+"їх з одного комп'ютера на інший."
+
+# UNTranslated message (cannot parse translation):
+#: levels/01+Basics/level02.html%2Bp.p:4-1
+msgid ""
+"Pause the simulation and click on the <strong>packet</strong> that is sent "
+"from Bob's <strong>computer</strong> to Alice's <strong>computer</strong>. "
+"The information about a packet is contained in its packet <strong>headers</"
+"strong>. This is a simple packet that only lists information in the "
+"<strong>network layer</strong>. Note the two pieces of information contained "
+"in this header: <strong>srcip</strong> (the source of the packet) and "
+"<strong>dstip</strong> (the destination of the packet)."
+msgstr ""
+"Призупиніть симуляцію та клацніть на <strong>пакет</strong>, який "
+"надсилається від комп'ютера Боба до комп'ютера Аліси. Інформація про "
+"пакет міститься в його <strong>заголовках</strong> (headers). Це простий "
+"пакет, який перелічує інформацію тільки на <strong>мережевому "
+"рівні</strong> (третій рівень OSI). Зверніть увагу на два елементи інформації, що містяться "
+"в цьому заголовку: <strong>srcip</strong> (джерело пакета, source IP) і "
+"<strong>dstip</strong> (ціль пакета, destination IP)."
+
+#: levels/01+Basics/level02.html%2Bp.p.h3:10-1
+msgid "Level Objectives"
+msgstr "Цілі рівня"
+
+#: levels/01+Basics/level02.html%2Bp.p.p:12-1
+msgid ""
+"To pass this level, you will need to send a packet from Alice to Bob. To do "
+"this:"
+msgstr ""
+"Щоб пройти цей рівень, вам необхідно надіслати пакет від Аліси (Alice) до Боба (Bob). Для "
+"цього:"
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:15-2
+msgid "Click the + button and add a new packet"
+msgstr "Натисніть кнопку + і додайте новий пакет"
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:16-2
+msgid ""
+"We need to send this packet <strong>from</strong> Alice, so make sure she is "
+"selected in the From: dropdown menu."
+msgstr ""
+"Нам необхідно відправити цей пакет <strong>від</strong> Аліси, тому "
+"переконайтеся, що вона вибрана у випадаючому меню поля «From:»."
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:17-2
+msgid ""
+"You need to set the <strong>srcip</strong> and <strong>dstip</strong> "
+"headers in the network layer.<br> <em>hint: restart and pause the simulator "
+"to click on packets to see what the srcip and dstip header values are set to."
+"</em>"
+msgstr ""
+"Вам необхідно встановити заголовки <strong>srcip</strong> та <strong>dstip</"
+"strong> у мережевому шарі.<br> <em><strong>Підказка:</strong> перезапустіть і призупиніть "
+"симулятор, щоб клацнути на пакети і побачити, які значення там встановлені для "
+"заголовків srcip та dstip.</em>"
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:19-2
+msgid "Save your new packet by pressing <strong>Add</strong> button"
+msgstr ""
+"Збережіть вашу нову пакетну інформацію, натиснувши кнопку <strong>Додати</"
+"strong>"
+
+#: levels/01+Basics/level02.html%2Bp.p.p.ul.li:20-2
+msgid ""
+"Restart the simulation and click the send arrow beside the newly added "
+"packet to see it in action!"
+msgstr "Перезапусти симуляцію і клацни на трикутній стрілці надсилання, поруч з "
+"новододаним пакетом, для того, щоб побачити його в дії!"

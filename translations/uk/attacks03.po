@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: netsim 0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: 2026-01-07 14:35+0300\n"
+"Last-Translator: Volodymyr M. Lisivka <vlisivkaLgmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/04+Attacks/attacks03.html%2Bp:2-1
+msgid ""
+"In this level, the routers use the <strong>time to live (TTL)</strong> "
+"field. The TTL field is designed to keep packets from getting trapped in "
+"infinite loops: each router decreases the TTL value by one, and if it ever "
+"reaches zero, it stops forwarding the packet and returns an error message "
+"instead."
+msgstr ""
+"На цьому рівні маршрутизатори використовують поле <strong>час життя (time to live, TTL)</"
+"strong>. Поле TTL призначено для того, щоб пакети не застрягали в "
+"безкінечних циклах: кожен маршрутизатор зменшує значення TTL на одиницю, і "
+"якщо воно досягає нуля, то він припиняє пересилання пакета та повертає "
+"повідомлення про помилку."
+
+#: levels/04+Attacks/attacks03.html%2Bp.p:7-1
+msgid ""
+"We have hidden the IP addresses of the routers in this level. Your job is to "
+"figure out who they are!"
+msgstr ""
+"Ми приховали IP-адреси маршрутизаторів на цьому рівні. Ваша задача - "
+"визначити, хто вони є!"
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p:9-1
+msgid ""
+"<strong>Fun fact:</strong> This trick is called \"tracerouting\", and you "
+"can do it for real to see the routers between you and anyone else. Ask a TA "
+"to show you how!"
+msgstr ""
+"<strong>Цікавий факт:</strong> Ці хитрощі називаються \"трасуванням\", і "
+"ви можете зробити це насправді, щоб побачити маршрутизатори між вами та будь-"
+"ким іншим. Попросіть асистента показати вам, як це зробити!"
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.h3:12-1
+msgid "Level Objectives"
+msgstr "Цілі рівня"
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.ul.li:15-2
+msgid "Figure out how to use TTLs to figure out the IP addresses of routers"
+msgstr ""
+"Визначити, як використовувати TTL для визначення IP-адрес маршрутизаторів"
+
+#: levels/04+Attacks/attacks03.html%2Bp.p.p.ul.li:16-2
+msgid ""
+"Send a ping to <strong>each</strong> of the four routers between Alice and "
+"Wikipedia"
+msgstr "Надішліть ping до <strong>КОЖНОГО</strong> з чотирьох маршрутизаторів "
+"між Алісою (Alice) та Вікіпедією (Wikipedia)"

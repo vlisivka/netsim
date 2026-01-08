@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: netsim 0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: 2026-01-07 14:35+0300\n"
+"Last-Translator: Volodymyr M. Lisivka <vlisivkaLgmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/03+DoS/dos03.html%2Bp:2-1
+msgid ""
+"The router in this level responds to a special type of ping, called a "
+"\"Broadcast ping\". When a router receives a packet that is addressed to the "
+"broadcast address, it replicates it and sends it to <em>all</em> the "
+"machines on the network."
+msgstr ""
+"Маршрутизатор на цьому рівні відповідає на спеціальний тип пінгу, який "
+"називається \"Broadcast ping\" (широкомовний пінг). Коли маршрутизатор отримує пакет, "
+"адресований широкомовній адресі, він реплікує його і надсилає <em>всім</em> "
+"машинам у мережі."
+
+#: levels/03+DoS/dos03.html%2Bp.p:5-1
+msgid ""
+"In this level, Wikipedia has received an <strong>upgrade</strong>: it can no "
+"longer be DoS'd from a single computer. Multiple computers will be required "
+"to coordinate with each other in order to send enough traffic."
+msgstr "У цьому рівні Вікіпедія отримала <strong>оновлення</strong>: тепер не "
+"можна провести DoS-атаку оише з одного комп'ютера. Буде потрібно кілька комп'ютерів, "
+"які координуватимуть свою роботу один з одним для надсилання достатньої кількості трафіку."
+
+#: levels/03+DoS/dos03.html%2Bp.p.p:8-1
+msgid ""
+"However, you only have control of a single computer! You will have to "
+"implement a <strong>smurf attack</strong>. In a smurf attack, you leverage "
+"other devices to send traffic <em>for you</em>."
+msgstr ""
+"Однак, ви маєте контроль тільки над одним компʼютером! Вам доведеться "
+"реалізувати <strong>smurf-атаку</strong>. У smurf-атаці ви використовуєте "
+"інші пристрої для відправлення трафіку <em>за вас</em>. "
+"(Smurf-атака була популярна в 1990-х роках, але сучасні мережеві пристрої "
+"та системи безпеки зазвичай захищають від таких атак.)"
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p:11-1
+msgid ""
+"Experiment with sending broadcast pings by sending a message with the dstip "
+"set to \"Broadcast\". See if you can overwhelm Wikipedia by combining this "
+"with what you learned about spoofing packet source addresses."
+msgstr ""
+"Проведіть експеримент з надсиланням широкомовних пінгових повідомлень, "
+"встановлюючи адресу dstip на \"Broadcast\" (Широкомовний). Перевірте, чи "
+"можете ви перевантажити Вікіпедію, обʼєднавши це з тим, що ви дізналися "
+"про підробку джерельних адрес пакетів."
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.h3:14-1
+msgid "Level Objectives"
+msgstr "Цілі рівня"
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:17-2
+msgid "Send a ping to the IP <strong>Broadcast</strong>"
+msgstr "Відправити пінг до IP-адреси <strong>Broadcast</strong> (Широкомовна)"
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:18-2
+msgid "Can you get Barbara to send a packet to Wikipedia?"
+msgstr "Чи можете ви змусити Барбару (Barbara) надіслати пакет до Вікіпедії?"
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:19-2
+msgid "Overwhelm Wikipedia with traffic"
+msgstr "Перевантажити Вікіпедію (Wikipedia) трафіком"
+
+#: levels/03+DoS/dos03.html%2Bp.p.p.p.ul.li:20-2
+msgid ""
+"Try to do this with only one packet in the Editor! (you may use the "
+"\"repeat\" feature)"
+msgstr "Спробуйте зробити це лише одним пакетом в редакторі! (Ви можете використовувати можливість \"Повторити\")"

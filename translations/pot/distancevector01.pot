@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,29 +47,29 @@ msgstr ""
 
 #: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p:19-1
 msgid ""
-"Tip: to update the DV table, you must add new device entries coming from "
-"other routers (adding the link cost to other router costs) or modify the "
-"existing entries if their new cost (other cost + link cost) is less than "
+"<em>Tip:</em> to update the DV table, you must add new device entries coming "
+"from other routers (adding the link cost to other router costs) or modify "
+"the existing entries if their new cost (other cost + link cost) is less than "
 "your current cost."
 msgstr ""
 
-#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.it.h3:23-1
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.h3:23-1
 msgid "Level Objectives"
 msgstr ""
 
-#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.it.ul.li:26-3
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:26-2
 msgid "note on a paper router names, port numbers and link costs"
 msgstr ""
 
-#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.it.ul.li:27-3
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:27-2
 msgid "reload the level and activate the topleft router"
 msgstr ""
 
-#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.it.ul.li:28-3
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:28-2
 msgid "update the Distance Vector table of the topleft router when required"
 msgstr ""
 
-#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.it.ul.li:29-3
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:29-2
 msgid ""
 "when done send a ping packet from <strong>Charlie</strong> to "
 "<strong>Carol</strong>"

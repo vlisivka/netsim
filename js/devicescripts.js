@@ -294,7 +294,7 @@ var deviceScripts = {
             } else {
                 if(packet.network.dstip == "Broadcast"){
                     for(var i=0; i<device.ports.length; i++){
-                        if((i != portNum) && (getPortRecipient(device.id, i) != "Google")){
+                        if((i != portNum) && (getPortRecipient(device.id, i) != "Wikipedia")){
                             newPacket = copyPacket(packet);
                             newPacket.network.dstip = getPortRecipient(device.id, i);
                             sendPacket(device.id, i, newPacket);

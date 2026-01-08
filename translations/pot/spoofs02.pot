@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,6 @@ msgstr ""
 msgid "Level Objectives"
 msgstr ""
 
-#: levels/02+Spoofs/spoofs02.html%2Bp.p.p.ul.li:15-5
+#: levels/02+Spoofs/spoofs02.html%2Bp.p.p.ul.li:16-2
 msgid "use Alice to steal a packet sent from Wikipedia to Charlie"
 msgstr ""

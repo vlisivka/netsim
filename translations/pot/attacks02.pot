@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,6 @@ msgstr ""
 msgid "Level Objectives"
 msgstr ""
 
-#: levels/04+Attacks/attacks02.html%2Bp.p.ul.li:14-5
+#: levels/04+Attacks/attacks02.html%2Bp.p.ul.li:14-2
 msgid "Send a packet from Alice to Blocked Site."
 msgstr ""

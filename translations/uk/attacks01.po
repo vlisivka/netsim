@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: netsim 0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: 2026-01-07 14:35+0300\n"
+"Last-Translator: Volodymyr M. Lisivka <vlisivkaLgmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/04+Attacks/attacks01.html%2Bp:2-1
+msgid ""
+"In this level, you can see an example of Bob sending Alice an "
+"<strong>encryption key</strong> in order to protect their messages. However, "
+"their simple protocol is vulnerable to a <strong>man-in-the-middle</strong> "
+"attack."
+msgstr ""
+"На цьому рівні ви можете побачити приклад того, як Боб надсилає Алісі "
+"<strong>криптографічний ключ</strong>, щоб захистити їхні повідомлення. "
+"Проте, їхній простий протокол вразливий до атаки <strong>«людина "
+"посередині»</strong>."
+
+#: levels/04+Attacks/attacks01.html%2Bp.p:5-1
+msgid ""
+"Eve has control over a router between Alice and Bob. She can see all "
+"messages that pass through this router and she can spoof messages from "
+"either Alice or Bob."
+msgstr ""
+"Ева (Eva) має контроль над маршрутизатором між Алісою (Alice) та Бобом (Bob). Вона може бачити "
+"всі повідомлення, які проходять через цей маршрутизатор, і вона може "
+"підробляти повідомлення від Аліси або Боба."
+
+#: levels/04+Attacks/attacks01.html%2Bp.p:8-1
+msgid ""
+"To beat this level, you need to trick Alice into encrypting her messages "
+"using a key Eve knows: <strong>31337</strong>. You must also trick Bob into "
+"thinking he is having a conversation with Alice as normal! See if you can "
+"figure out how to trick them both without them discovering your presence "
+"between them."
+msgstr ""
+"Щоб пройти цей рівень, вам потрібно обдурити Алісу, змусивши її шифрувати "
+"свої повідомлення за допомогою ключа, який знає Ева: <strong>31337</strong>. "
+"Вам також потрібно обдурити Боба, змусивши його думати, що він веде звичайну "
+"розмову з Алісою! Подивіться, чи можете ви вгадати, як обдурити їх обох без "
+"того, щоб вони відкрили вашу присутність між ними."
+
+#: levels/04+Attacks/attacks01.html%2Bp.p.p:12-1
+msgid ""
+"<strong>Hint:</strong> there is an example of how the encryption protocol "
+"works at the top of the field. Use the <span class=\"button\">pause</span> "
+"button to see what the values of the packet headers are in the protocol."
+msgstr ""
+"<strong>Підказка:</strong> у верхній половині поля є приклад того, як працює "
+"протокол шифрування. Використовуйте кнопку <span class=\"button\">pause</"
+"span>, щоб побачити значення заголовків пакетів у протоколі."
+
+#: levels/04+Attacks/attacks01.html%2Bp.p.p.h3:15-1
+msgid "Level Objectives"
+msgstr "Цілі рівня"
+
+#: levels/04+Attacks/attacks01.html%2Bp.p.p.ul.li:18-2
+msgid "trick Alice into encrypting her message with Eve's key: 31337"
+msgstr ""
+"Обманіть Алісу (Alice), щоб вона зашифрувала своє повідомлення ключем Єви: 31337"
+
+#: levels/04+Attacks/attacks01.html%2Bp.p.p.ul.li:19-2
+msgid "make sure Bob can still read the message, by encrypting it with his key"
+msgstr "переконайтеся що Боб (Bob) все ще може читати повідомлення, зашифрувавши "
+"повідомлення його ключем"

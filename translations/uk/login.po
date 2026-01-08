@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/login/login.html%2Bp:2-1
+msgid ""
+"Netsim is a simulator game intended to teach you the basics of how computer "
+"networks function, with an emphasis on security. You will learn how to "
+"perform attacks that real hackers use, and see how they work in our "
+"simulator!"
+msgstr ""
+"Netsim — це симуляторна гра, призначена для вивчення основ роботи "
+"комп'ютерних мереж, з акцентом на безпеку. Ви дізнаєтесь, як виконувати "
+"атаки, які застосовують справжні хакери, і побачите, як вони працюють у "
+"нашому симуляторі!"
+
+#: levels/login/login.html%2Bp:5-1
+msgid ""
+"Netsim is completely free to play. To get started, log in below or register "
+"a new account."
+msgstr ""
+"Гра Netsim повністю безкоштовна. Для початку гри, увійдіть нижче або "
+"зареєструйте новий акаунт."
+
+#: levels/login/login.html%2Bdiv.div.p:12-3
+msgid "<?=$login_error?>"
+msgstr ""
+
+#: levels/login/login.html%2Bform.p.label:20-5
+msgid "Username:"
+msgstr "Користувач:"
+
+#: levels/login/login.html%2Bform.p.label:24-10
+msgid "Password:"
+msgstr "Пароль:"
+
+#: levels/login/login.html%2Bform.p:24-41
+msgid "Log in"
+msgstr "Увійти"
+
+#: levels/login/login.html%2Bform.p:30-2
+msgid "Register"
+msgstr "Зареєструватися"
+
+#: levels/login/login.html%2Bp:35-1
+msgid ""
+"Netsim was created by <a href=\"https://erinn.io/\">Erinn Atwater</a> and <a "
+"href=\"https://cs.uwaterloo.ca/~cbocovic\">Cecylia Bocovich</a>. Some device "
+"images were designed by <a href=\"http://www.flaticon.com/authors/"
+"madebyoliver\">madebyoliver</a> from Flaticon. View Netsim's source code on "
+"<a href=\"https://github.com/errorinn/netsim\">Github</a>, or tip the "
+"creator on <a href=\"https://www.patreon.com/errorinn\">Patreon</a>."
+msgstr ""
+"Netsim створено <a href=\"https://erinn.io/\">Erinn Atwater</a> та <a "
+"href=\"https://cs.uwaterloo.ca/~cbocovic\">Cecylia Bocovich</a>. Деякі "
+"зображення пристроїв були розроблені <a "
+"href=\"http://www.flaticon.com/authors/madebyoliver\">madebyoliver</a> з "
+"Flaticon. Переглянути вихідний код Netsim на <a "
+"href=\"https://github.com/errorinn/netsim\">Github</a>, або підтримати "
+"творця на <a href=\"https://www.patreon.com/errorinn\">Patreon</a>. "
+"<br>Переклав на українську: Володимир М. Лісівка."

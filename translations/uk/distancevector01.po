@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: netsim 0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
+"PO-Revision-Date: 2026-01-07 14:35+0300\n"
+"Last-Translator: Volodymyr M. Lisivka <vlisivkaLgmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.5\n"
+
+#: levels/05+Routing/distancevector01.html%2Bp:2-1
+msgid ""
+"In <strong>dynamic</strong> routing, routers build their routing tables "
+"based on the knowledge they have about neighbor's links. Those links now "
+"have a <strong>cost</strong>, reflecting a measure of distance/bandwidth/"
+"delay between nodes. In <strong>distance vector</strong> algorithms, the "
+"router algorithm is basically <em>tell your neighbors when you know about "
+"everyone</em>."
+msgstr ""
+"У <strong>динамічній</strong> маршрутизації, маршрутизатори будують свої "
+"таблиці маршрутизації на основі інформації про зв'язки з сусідами. Ці зв'язки "
+"тепер мають <strong>вартість</strong> (cost), що відображає якоюсь мірою "
+"відстань і/або пропускну здатність і/або затримки між вузлами. У алгоритмах "
+"<strong>вектора відстаней</strong>, алгоритм маршрутизатора по суті є "
+"<em>повідомте своїм сусідам, коли ви знаєте про всіх</em>."
+
+#: levels/05+Routing/distancevector01.html%2Bp.p:7-1
+msgid ""
+"In this level, three routers automatically exchange their distance vector "
+"tables and build their routing tables this way. The topleft router is manual "
+"and disabled when the simulation starts. Leave it disabled and first observe "
+"how routers exchange information and build their tables, and also when they "
+"decide to stop."
+msgstr ""
+"На цьому рівні три маршрутизатори автоматично обмінюються своїми таблицями "
+"векторів відстаней і будують свої таблиці маршрутизації саме таким чином. "
+"Лівий ерхній маршрутизатор в ручному режимі і вимкнений при запуску симуляції. "
+"Залишайте його вимкненим і спостерігайте спочатку, як маршрутизатори "
+"обмінюються інформацією та будують свої таблиці, а також коли вони вирішать "
+"зупинитися."
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p:12-1
+msgid ""
+"Next reload (F5) the simulation (to destroy router's tables, not done yet) "
+"and activate the manual router. Start by filling its Distance Vector table "
+"with its 2 neighbors (Charlie and Router 1), and then you will have to reply "
+"to the successive packets sent by others routers by updating your DV table. "
+"Building the routing table and sending packets is done automatically when "
+"you update the DV table."
+msgstr ""
+"Далі, перезавантажте (F5) симуляцію (для знищення таблиць маршрутизаторів, "
+"ще не дороблено) і активуйте ручний маршрутизатор. Почніть "
+"заповнювати його таблицю векторів відстаней двома сусідами (Чарлі та "
+"Маршрутизатором 1), а потім вам доведеться відповідати послідовним пакетам, "
+"які надсилають інші маршрутизатори, оновлюючи свою таблицю векторів "
+"відстаней. Будівництво таблиці маршрутизації та надсилання пакетів "
+"виконується автоматично при оновленні вашої таблиці векторів відстаней."
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p:17-1
+msgid "Then try to send a ping packet from Charlie to Carol."
+msgstr "Потім спробуйте надіслати пакет пінгу від Чарлі (Charlie) до Керол (Carol)."
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p:19-1
+msgid ""
+"<em>Tip:</em> to update the DV table, you must add new device entries coming "
+"from other routers (adding the link cost to other router costs) or modify "
+"the existing entries if their new cost (other cost + link cost) is less than "
+"your current cost."
+msgstr ""
+"<em>Порада:</em> для оновлення таблиці DV необхідно додати нові записи пристроїв, що "
+"надходять з інших маршрутизаторів (додаючи вартість зʼєднання до вартості "
+"інших маршрутизаторів) або змінити існуючі записи про звʼязки, якщо їх нова вартість "
+"(вартість іншого + вартість зʼєднання) <em>менша</em> за поточну вартість вашого старого запису."
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.h3:23-1
+msgid "Level Objectives"
+msgstr "Цілі рівня"
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:26-2
+msgid "note on a paper router names, port numbers and link costs"
+msgstr ""
+"записуйте на папері імена маршрутизаторів, номери портів та вартість зʼєднань"
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:27-2
+msgid "reload the level and activate the topleft router"
+msgstr ""
+"перезавантажте рівень та активуйте маршрутизатор у верхньому лівому куті"
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:28-2
+msgid "update the Distance Vector table of the topleft router when required"
+msgstr ""
+"оновлюйте таблицю векторів відстаней маршрутизатора у верхньому лівому куті "
+"за необхідності"
+
+#: levels/05+Routing/distancevector01.html%2Bp.p.p.p.p.ul.li:29-2
+msgid ""
+"when done send a ping packet from <strong>Charlie</strong> to <strong>Carol"
+"</strong>"
+msgstr "Потім спробуйте надіслати пакет пінгу від <strong>Чарлі</strong> "
+"(Charlie) до <strong>Керол</strong> (Carol)."

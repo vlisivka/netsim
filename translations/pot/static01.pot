@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 09:52+0300\n"
+"POT-Creation-Date: 2026-01-07 14:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Level Objectives"
 msgstr ""
 
-#: levels/05+Routing/static01.html%2Bp.p.p.p.ul.li:23-5
+#: levels/05+Routing/static01.html%2Bp.p.p.p.ul.li:24-2
 msgid ""
 "send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong>"
 msgstr ""

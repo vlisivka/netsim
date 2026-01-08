@@ -32,7 +32,7 @@
 			player:true
 		},
 		{
-			id:"Google",
+			id:"Wikipedia",
                         image: "server",
 			ports:1,
 			x:0.8,
@@ -40,7 +40,7 @@
 			capacity:3
 		},
 		{
-			id:"Google's Firewall",
+			id:"Wikipedia's Firewall",
                         image: "router",
 			ports:5,
 			x:0.6,
@@ -54,23 +54,23 @@
 	links:[
 		{
 			src:"Alice", srcport:0,
-			dst:"Google's Firewall", dstport:4
+			dst:"Wikipedia's Firewall", dstport:4
 		},
 		{
 			src:"Zombie 1", srcport:0,
-			dst:"Google's Firewall", dstport:1
+			dst:"Wikipedia's Firewall", dstport:1
 		},
 		{
 			src:"Zombie 2", srcport:0,
-			dst:"Google's Firewall", dstport:2
+			dst:"Wikipedia's Firewall", dstport:2
 		},
 		{
 			src:"Zombie 3", srcport:0,
-			dst:"Google's Firewall", dstport:3
+			dst:"Wikipedia's Firewall", dstport:3
 		},
 		{
-			src:"Google", srcport:0,
-			dst:"Google's Firewall", dstport:0
+			src:"Wikipedia", srcport:0,
+			dst:"Wikipedia's Firewall", dstport:0
 		}
 	],
 	timeline:[
@@ -80,14 +80,14 @@
 			from:"Alice",
 			times:20,
 			payload:{
-				network:{srcip:"Alice",dstip:"Google"}
+				network:{srcip:"Alice",dstip:"Wikipedia"}
 			}
 		}
 	],
 	triggers:[
 	    {
 			type:"flood",
-			device:"Google"
+			device:"Wikipedia"
 	    }
         ],
 	nextLevel:10

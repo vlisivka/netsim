@@ -9,7 +9,7 @@
 			player:true
 		},
 		{
-			id:"Google",
+			id:"Wikipedia",
                         image: "server",
 			ports:1,
 			x:0.75,
@@ -20,14 +20,14 @@
 	links:[
 		{
 			src:"Alice", srcport:0,
-			dst:"Google", dstport:0
+			dst:"Wikipedia", dstport:0
 		}
 	],
 	timeline:[],
 	triggers:[
 		{
 			type:"flood",
-			device:"Google",
+			device:"Wikipedia",
 		}
 	],
 	nextLevel:9

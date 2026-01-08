@@ -4,7 +4,7 @@ they have about neighbor's links. Those links now have a <strong>cost</strong>, 
 distance/bandwidth/delay between nodes. In <strong>distance vector</strong> algorithms, the router
 algorithm is basically <em>tell your neighbors when you know about everyone</em>.
 
-<p> In this level, three routers automatically exchange their distance vector tables and build
+<p>In this level, three routers automatically exchange their distance vector tables and build
 their routing tables this way. The topleft router is manual and disabled when the simulation starts.
 Leave it disabled and first observe how routers exchange information and build their tables, and also
 when they decide to stop.
@@ -16,15 +16,15 @@ and sending packets is done automatically when you update the DV table.
 
 <p>Then try to send a ping packet from Charlie to Carol.
 
-<p><it>Tip: to update the DV table, you must add new device entries coming from other routers (adding the link cost
+<p><em>Tip:</em> to update the DV table, you must add new device entries coming from other routers (adding the link cost
 to other router costs)
 or modify the existing entries if their new cost (other cost + link cost) is less than your current cost.
 
 <h3>Level Objectives</h3>
 
 <ul>
-  <li>note on a paper router names, port numbers and link costs</li>
-  <li>reload the level and activate the topleft router</li>
-  <li>update the Distance Vector table of the topleft router when required</li>
-  <li>when done send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong></li>
+	<li>note on a paper router names, port numbers and link costs</li>
+	<li>reload the level and activate the topleft router</li>
+	<li>update the Distance Vector table of the topleft router when required</li>
+	<li>when done send a ping packet from <strong>Charlie</strong> to <strong>Carol</strong></li>
 </ul>

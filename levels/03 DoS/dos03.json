@@ -32,7 +32,7 @@
                         script: deviceScripts.ping
 		},
 		{
-			id:"Google",
+			id:"Wikipedia",
                         image: "server",
 			ports:1,
 			x:0.8,
@@ -51,7 +51,7 @@
 				{dstip:"Barbara",portNum:1},
 				{dstip:"Carol",portNum:2},
 				{dstip:"Darcy",portNum:3},
-				{dstip:"Google",portNum:4}
+				{dstip:"Wikipedia",portNum:4}
 			]
 		}
 	],
@@ -73,7 +73,7 @@
 			dst:"Router", dstport:3
 		},
 		{
-			src:"Google", srcport:0,
+			src:"Wikipedia", srcport:0,
 			dst:"Router", dstport:4
 		}
 	],
@@ -81,7 +81,7 @@
 	triggers:[
 		{
 			type:"flood",
-			device:"Google"
+			device:"Wikipedia"
 		}
         ],
 	nextLevel:11
